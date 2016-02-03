@@ -27,7 +27,11 @@
     "url": "https://github.com/greybax/generator-prepare-git-repo/issues"
   },
   "homepage": "https://github.com/greybax/generator-prepare-git-repo/#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "yeoman-assert": "^2.1.1",
+    "yeoman-test": "^1.0.0"
+  },
   "dependencies": {
     "generator-git-init": "^1.1.1",
     "object-assign": "^4.0.1",

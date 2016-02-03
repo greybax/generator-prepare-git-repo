@@ -48,7 +48,7 @@ module.exports = yeoman.Base.extend({
             this.fs.copyTpl(this.templatePath(from), this.destinationPath(to), this.props);
         }.bind(this);
         
-        copy('tests', 'tests');
+        copy('test', 'test');
         copy('.gitignore', '.gitignore');
         copy('.npmignore', '.npmignore');
         copy('.travis.yml', '.travis.yml');

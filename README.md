@@ -8,6 +8,8 @@
 > Yeoman generator for quick start prepare template git project repository.
 Includes ```npm```, ```travis```, ```coveralls```, ```dependencies``` badges.
 
+![mem][mem-image]
+
 ## Install
 
 ```js
@@ -19,12 +21,12 @@ npm install -g yo generator-prepare-git-repo
 ```js
 yo prepare-git-repo
 ```
-[![https://gyazo.com/50e521bd92f6564842725c7deaac053c](https://i.gyazo.com/50e521bd92f6564842725c7deaac053c.png)](https://gyazo.com/50e521bd92f6564842725c7deaac053c)
+![sample](https://i.gyazo.com/50e521bd92f6564842725c7deaac053c.png)
 
 ## Generated project tree
 ```
 root
- | tests
+ | test
  |  | test.js
  | index.js
  | .gitignore
@@ -37,6 +39,8 @@ root
 ## License
 
 MIT © [Aleksandr Filatov](https://alfilatov.com/)
+
+[mem-image]: https://i.imgflip.com/yjz6c.jpg
 
 [npm-url]: https://npmjs.org/package/generator-prepare-git-repo
 [npm-image]: https://img.shields.io/npm/v/generator-prepare-git-repo.svg?style=flat-square
