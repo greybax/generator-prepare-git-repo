@@ -5,7 +5,7 @@
 [![Dependency Status][depstat-image]][depstat-url]
 [![DevDependency Status][depstat-dev-image]][depstat-dev-url]
 
-> Yeoman generator for quick start prepare git project repository.
+> Yeoman generator for quick start prepare template git project repository.
 Includes ```npm```, ```travis```, ```coveralls```, ```dependencies``` badges.
 
 ## Install
@@ -19,6 +19,7 @@ npm install -g yo generator-prepare-git-repo
 ```js
 yo prepare-git-repo
 ```
+[![https://gyazo.com/50e521bd92f6564842725c7deaac053c](https://i.gyazo.com/50e521bd92f6564842725c7deaac053c.png)](https://gyazo.com/50e521bd92f6564842725c7deaac053c)
 
 ## Generated project tree
 ```
