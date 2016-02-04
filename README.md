@@ -26,6 +26,8 @@ yo prepare-git-repo
 ## Generated project tree
 ```
 root
+ | node_modules
+ |  | ...
  | test
  |  | test.js
  | index.js
@@ -34,6 +36,18 @@ root
  | .travis.yml
  | package.json
  | README.md
+```
+
+```yo prepare-git-repo``` will install follow dependencies from template **package.json**:
+
+```json
+"devDependencies": {
+    "coveralls": "^2.11.6",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.4.5",
+    "mocha-lcov-reporter": "^1.0.0",
+    "should": "^8.2.1"
+  }
 ```
 
 ## License
@@ -51,5 +65,5 @@ MIT © [Aleksandr Filatov](https://alfilatov.com/)
 [depstat-url]: https://david-dm.org/greybax/generator-prepare-git-repo
 [depstat-image]: https://david-dm.org/greybax/generator-prepare-git-repo.svg?style=flat-square
 
-[depstat-dev-url]: https://david-dm.org/greybax/generator-prepare-git-repo
+[depstat-dev-url]: https://david-dm.org/greybax/generator-prepare-git-repo#info=devDependencies
 [depstat-dev-image]: https://david-dm.org/greybax/generator-prepare-git-repo/dev-status.svg

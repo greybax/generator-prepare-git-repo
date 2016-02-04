@@ -58,5 +58,5 @@ MIT © <%= author %>
 [depstat-url]: https://david-dm.org/<%= githubUser %>/<%= projectName %>
 [depstat-image]: https://david-dm.org/<%= githubUser %>/<%= projectName %>.svg?style=flat-square
 
-[depstat-dev-url]: https://david-dm.org/<%= githubUser %>/<%= projectName %>
+[depstat-dev-url]: https://david-dm.org/<%= githubUser %>/<%= projectName %>#info=devDependencies
 [depstat-dev-image]: https://david-dm.org/<%= githubUser %>/<%= projectName %>/dev-status.svg?style=flat-square
