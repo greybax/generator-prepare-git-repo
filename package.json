@@ -1,6 +1,6 @@
 {
   "name": "generator-prepare-git-repo",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Yeoman generator for quick prepare github project structure",
   "main": "index.js",
   "scripts": {

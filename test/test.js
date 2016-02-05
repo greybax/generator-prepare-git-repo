@@ -6,6 +6,7 @@ var helpers = require('yeoman-test');
 
 describe("prepare-git-repo:app", function _describe(){
     before(function _before(done) {
+        this.timeout(10000);
         helpers.run(path.join(__dirname, '../app'))
         .withPrompts({
             projectName: 'test-project-name',
