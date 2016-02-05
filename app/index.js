@@ -14,27 +14,72 @@ module.exports = yeoman.Base.extend({
 
         prompts = prompts.concat([{
             name: 'projectName',
-            message: 'Project name:'
+            message: 'Project name:',
+            validate: function(input) {
+                var done = this.async();
+
+                setTimeout(function() {
+                    if (!input || input === "") {
+                        done("You need to provide a project name");
+                        return;
+                    }
+                    done(true);
+                }, 500);
+            }
         }]);
         
         prompts = prompts.concat([{
             name: 'projectVersion',
-            message: 'Project version:'
+            message: 'Project version:',
+            default: '0.0.0',
         }]);
-        
+
         prompts = prompts.concat([{
             name: 'projectDescsription',
-            message: 'Project description:'
+            message: 'Project description:',
+            validate: function(input) {
+                var done = this.async();
+
+                setTimeout(function() {
+                    if (!input || input === "") {
+                        done("You have to provide description");
+                        return;
+                    }
+                    done(true);
+                }, 500);
+            }
         }]);
         
         prompts = prompts.concat([{
             name: 'author',
-            message: 'Author:'
+            message: 'Author:',
+            validate: function(input) {
+                var done = this.async();
+
+                setTimeout(function() {
+                    if (!input || input === "") {
+                        done("You have to provide author");
+                        return;
+                    }
+                    done(true);
+                }, 500);
+            }
         }]);
         
         prompts = prompts.concat([{
             name: 'githubUser',
-            message: 'Github profile:'
+            message: 'Github profile:',
+            validate: function(input) {
+                var done = this.async();
+
+                setTimeout(function() {
+                    if (!input || input === "") {
+                        done("You have to provide github username");
+                        return;
+                    }
+                    done(true);
+                }, 500);
+            }
         }]);
         
         this.prompt(prompts, function answers(props) {

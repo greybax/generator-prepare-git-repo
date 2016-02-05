@@ -77,4 +77,4 @@ MIT © [Aleksandr Filatov](https://alfilatov.com/)
 [depstat-image]: https://david-dm.org/greybax/generator-prepare-git-repo.svg?style=flat-square
 
 [depstat-dev-url]: https://david-dm.org/greybax/generator-prepare-git-repo#info=devDependencies
-[depstat-dev-image]: https://david-dm.org/greybax/generator-prepare-git-repo/dev-status.svg
+[depstat-dev-image]: https://david-dm.org/greybax/generator-prepare-git-repo/dev-status.svg?style=flat-square
