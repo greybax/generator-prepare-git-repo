@@ -12,15 +12,21 @@ Includes ```npm```, ```travis```, ```coveralls```, ```dependencies``` badges.
 
 ## Install
 
-```js
+```console
 npm install -g yo generator-prepare-git-repo
 ```
 
 ## Usage
 
-```js
+```console
+# create folder for your project
+mkdir demo
+cd demo
+
+# run generator
 yo prepare-git-repo
 ```
+
 ![sample](https://i.gyazo.com/50e521bd92f6564842725c7deaac053c.png)
 
 ## Generated project tree
@@ -49,6 +55,11 @@ root
     "should": "^8.2.1"
   }
 ```
+
+Composed with another generators:
+
+* [generator-git-init](https://www.npmjs.com/package/generator-git-init) for ```git init```
+* [generator-travis](https://www.npmjs.com/package/generator-travis) to getting and keeping ```.travis.yml``` up-to-date effortlessly
 
 ## License
 

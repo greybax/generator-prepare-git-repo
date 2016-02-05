@@ -51,13 +51,18 @@ module.exports = yeoman.Base.extend({
         copy('test', 'test');
         copy('.gitignore', '.gitignore');
         copy('.npmignore', '.npmignore');
-        copy('.travis.yml', '.travis.yml');
         copy('index.js', 'index.js');
         copy('package.json', 'package.json');
         copy('README.md', 'README.md');
         
         this.composeWith('git-init', {}, {
             local: require.resolve('generator-git-init'),
+        });
+        
+        this.composeWith('travis', { options: { config: {
+            after_script: ['npm run coveralls']
+        }}}, {
+            local: require.resolve('generator-travis')
         });
     },
     
