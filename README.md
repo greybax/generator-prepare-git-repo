@@ -27,7 +27,7 @@ cd demo
 yo prepare-git-repo
 ```
 
-![sample](https://i.gyazo.com/50e521bd92f6564842725c7deaac053c.png)
+![sample](https://i.gyazo.com/f87a90fdfb6e40eafaa1d03b6e7ce0e8.png)
 
 ## Generated project tree
 ```
@@ -48,11 +48,11 @@ root
 
 ```json
 "devDependencies": {
-    "coveralls": "^2.11.6",
-    "istanbul": "^0.4.2",
-    "mocha": "^2.4.5",
-    "mocha-lcov-reporter": "^1.0.0",
-    "should": "^8.2.1"
+    "coveralls": "*",
+    "istanbul": "*",
+    "mocha": "*",
+    "mocha-lcov-reporter": "*",
+    "should": "*"
   }
 ```
 

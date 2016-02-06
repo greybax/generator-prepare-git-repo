@@ -15,20 +15,21 @@
     "url": "git+https://github.com/<%= githubUser %>/<%= projectName %>/.git"
   },
   "keywords": [
-    ""
+    <% keywords.trim().split(',').forEach(function(keyword, i, arr) { keyword = keyword.trim();%>"<%= keyword %>"<% if (i !== arr.length - 1) { %>,
+    <% } %><% }); %>
   ],
   "author": "<%= author %>",
-  "license": "MIT",
+  "license": "<%= license %>",
   "bugs": {
     "url": "https://github.com/<%= githubUser %>/<%= projectName %>/issues"
   },
   "homepage": "https://github.com/<%= githubUser %>/<%= projectName %>#readme",
   "devDependencies": {
-    "coveralls": "^2.11.6",
-    "istanbul": "^0.4.2",
-    "mocha": "^2.4.5",
-    "mocha-lcov-reporter": "^1.0.0",
-    "should": "^8.2.1"
+    "coveralls": "*",
+    "istanbul": "*",
+    "mocha": "*",
+    "mocha-lcov-reporter": "*",
+    "should": "*"
   },
   "dependencies": {
   }

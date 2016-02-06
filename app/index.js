@@ -51,6 +51,18 @@ module.exports = yeoman.Base.extend({
         }]);
         
         prompts = prompts.concat([{
+            name: 'keywords',
+            message: 'Keywords:',
+            default: '',
+        }]);
+        
+        prompts = prompts.concat([{
+            name: 'license',
+            message: 'License:',
+            default: 'MIT',
+        }]);
+        
+        prompts = prompts.concat([{
             name: 'author',
             message: 'Author:',
             validate: function(input) {
