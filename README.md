@@ -8,6 +8,11 @@
 > Yeoman generator for quick start prepare template git project repository.
 Includes ```npm```, ```travis```, ```coveralls```, ```dependencies``` badges.
 
+Supports 2 types of templates:
+
+* ```ES5```
+* ```ES6``` with ```Babel``` transpiler.
+
 ![mem][mem-image]
 
 ## Install
@@ -37,6 +42,7 @@ root
  | test
  |  | test.js
  | index.js
+ | .babelrc     // only for ES6
  | .gitignore
  | .npmignore
  | .travis.yml
@@ -48,11 +54,17 @@ root
 
 ```json
 "devDependencies": {
+    "babel-cli": "*",           // only for ES6
+    "babel-core": "*",          // only for ES6
+    "babel-preset-es2015": "*", // only for ES6
     "coveralls": "*",
     "istanbul": "*",
     "mocha": "*",
     "mocha-lcov-reporter": "*",
-    "should": "*"
+    "should": "*",
+    "isparta": "*",
+    "npm-run-all": "*",
+    "rimraf": "*"
   }
 ```
 
