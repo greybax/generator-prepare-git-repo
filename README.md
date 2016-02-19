@@ -58,8 +58,8 @@ root
 
 Composed with another generators:
 
-* [generator-git-init](https://www.npmjs.com/package/generator-git-init) for ```git init```
 * [generator-travis](https://www.npmjs.com/package/generator-travis) to getting and keeping ```.travis.yml``` up-to-date effortlessly
+* [generator-babel](https://www.npmjs.com/package/generator-babel)
 
 ## License
 

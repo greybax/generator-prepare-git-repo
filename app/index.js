@@ -1,10 +1,14 @@
 'use strict';
 
-var yeoman = require('yeoman-generator')
+var yeoman = require('yeoman-generator');
+var yosay = require('yosay');
 var assign = require('object-assign');
 
 module.exports = yeoman.Base.extend({
-    initializing: function () {
+    initializing: function initializing() {
+        welcome: {
+            this.log(yosay('Welcome to the Prepare Your Git Repo generator!'));
+        }
         this.props = {};
     },
 
@@ -48,6 +52,22 @@ module.exports = yeoman.Base.extend({
                     done(true);
                 }, 500);
             }
+        }]);
+        
+        prompts = prompts.concat([{
+            type: "list",
+            name: 'useBabel',
+            message: 'Do you want use Babel:',
+            choices: [
+            {
+                name: "Yes",
+                value: true
+            },
+            {
+                name: "No",
+                value: false
+            }
+            ]
         }]);
         
         prompts = prompts.concat([{
@@ -112,15 +132,21 @@ module.exports = yeoman.Base.extend({
         copy('package.json', 'package.json');
         copy('README.md', 'README.md');
         
-        this.composeWith('git-init', {}, {
-            local: require.resolve('generator-git-init'),
-        });
+        this.spawnCommand('git', ['init', '--quiet']);
         
         this.composeWith('travis', { options: { config: {
             after_script: ['npm run coveralls']
         }}}, {
             local: require.resolve('generator-travis')
         });
+        
+        if (this.props.useBabel) {
+            this.composeWith('babel', { options: {
+                'skip-install': this.options['skip-install']
+            }}, {
+                local: require.resolve('generator-babel')
+            });
+        }
     },
     
     install: function install() {

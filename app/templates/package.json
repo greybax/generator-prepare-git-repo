@@ -7,8 +7,10 @@
     "coverage": "istanbul cover _mocha",
     "precoveralls": "npm run coverage",
     "coveralls": "coveralls < coverage/lcov.info",
-    "test": "mocha",
-    "tdd": "npm test -- --watch"
+    "test": "<% if (useBabel) { %> <%= 'mocha --require babel-core/register' %><% } else { %><%= 'mocha'  %><% } %>",
+    "tdd": "npm test -- --watch",
+    "transpile": "<% if (useBabel) { %> <%= 'babel index.js --out-file index.es5.js' %><% } else { %><%= '' %><% } %>",
+    "prepublish": "<% if (useBabel) { %> <%= 'npm run transpile' %><% } else { %><%= '' %><% } %>"
   },
   "repository": {
     "type": "git",
