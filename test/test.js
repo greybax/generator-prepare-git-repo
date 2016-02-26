@@ -77,7 +77,7 @@ describe("prepare-git-repo:app", function _describeApp(){
             ]);
         });
         
-        it("shouldn't create .babelrc", function _it() {
+        it("no creates .babelrc", function _it() {
             assert.noFile(".babelrc");
         });
         
@@ -91,7 +91,7 @@ describe("prepare-git-repo:app", function _describeApp(){
             assert.fileContent("README.md", "just_user");
         });
         
-        it("creates files shouldn't contain", function _it() {
+        it("creates files which not contains", function _it() {
             assert.noFileContent("package.json", "mocha --require babel-core/register");
             assert.noFileContent("package.json", "babel index.js --out-file index.es5.js");
         });

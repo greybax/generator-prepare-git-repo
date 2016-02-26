@@ -147,6 +147,14 @@ module.exports = yeoman.Base.extend({
                 local: require.resolve('generator-babel')
             });
         }
+        
+        this.composeWith('badges', { options: {
+            user: this.props.githubUser,
+            project: this.props.projectName,
+            badges: ['npm', 'travis', "coveralls", "dependencies", "devDependencies"]
+        }}, {
+            local: require.resolve('generator-badges')
+        });
     },
     
     install: function install() {

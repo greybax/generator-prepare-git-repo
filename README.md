@@ -72,6 +72,7 @@ Composed with another generators:
 
 * [generator-travis](https://www.npmjs.com/package/generator-travis) to getting and keeping ```.travis.yml``` up-to-date effortlessly
 * [generator-babel](https://www.npmjs.com/package/generator-babel)
+* [generator-badges](https://www.npmjs.com/package/generator-badges)
 
 ## License
 
