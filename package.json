@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/greybax/generator-prepare-git-repo/#readme",
   "devDependencies": {
-    "mocha": "^2.4.5",
+    "mocha": "^3.1.1",
     "yeoman-assert": "^2.1.1",
     "yeoman-test": "^1.0.0"
   },
